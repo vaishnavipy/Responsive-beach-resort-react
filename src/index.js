@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {
-  BrowserRouter as Router } from "react-router-dom"
+import {BrowserRouter as Router } from "react-router-dom"
+import {RoomContextProvider} from "./roomContextProvider"
 
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>
+  <RoomContextProvider>
+    <Router>
+      <App />
+    </Router>
+  </RoomContextProvider>
   ,
   document.getElementById('root')
 );

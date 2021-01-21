@@ -1,6 +1,7 @@
 import React from "react"
 import RoomsBanner from "./roomsBanner"
 import Filter from "./filter"
+import RoomsGrid from "./roomsGrid"
 
 
 function Rooms(){
@@ -8,6 +9,7 @@ function Rooms(){
     <div>  
         <RoomsBanner /> 
         <Filter />
+        <RoomsGrid />
         
     </div>)
 }
