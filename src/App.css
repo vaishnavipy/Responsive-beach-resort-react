@@ -105,11 +105,12 @@ hr{
   text-transform: uppercase;
   cursor: pointer;
   border :2.5px solid #AF9A7D;
-  transition: background-color 1s;
+  transition: background-color 1s,color 1s;
 }
 
 .banner-btn:hover{
   border :2.5px solid #AF9A7D;
+  color: #AF9A7D;
   background-color: transparent;
 }
 
@@ -179,3 +180,29 @@ margin-top: 4em;
    background-color: red;
    box-shadow: 2px 2px solid black;
  }
+/*--------- ROOM BANNER-------------*/
+
+.room-banner{
+  width: 100vw;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./images/room-2.jpeg);
+  background-repeat: no-repeat;
+  background-position:center;
+background-size:cover;
+height: 70vh ;
+color:white;
+letter-spacing: 3.5px;
+text-align: center;
+
+}
+.room-banner button{
+  margin: 1em;
+  
+}
+/*--------- FILTER-------------*/
+.filter-bg{
+  background-color: white;
+}
