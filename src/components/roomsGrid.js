@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { Fragment, useContext } from "react"
 import {RoomContext} from "../roomContextProvider"
 import {Link} from "react-router-dom"
 
@@ -25,11 +25,10 @@ function RoomsGrid(){
     })
 
     return(
-    <div className="all-rooms-container">  
-
-        {allRooms}
-        
-    </div>)
+        <Fragment>
+        { data.length !== 0 ?  <div className="all-rooms-container">  {allRooms } </div> : <h1 className="no-rooms-txt">Unfortunately No Rooms Matched Your Search Parameters</h1> }
+        </Fragment>
+        )
 }
 
 export default RoomsGrid

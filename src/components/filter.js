@@ -1,11 +1,14 @@
-import React,{useState} from "react"
+import React,{useContext, useEffect, useState} from "react"
+import { RoomContext } from "../roomContextProvider"
 
 
 
 
 function Filter(){
 
-    const [input,setInput] = useState({roomType:"",guests:""})
+    const {handleFilters} = useContext(RoomContext)
+
+    const [input,setInput] = useState({roomType:"all",guests:"1",price:"600",minSize:"0",maxSize:"1000",bfchecked:false,petschecked:false})
 
    
 
@@ -13,9 +16,24 @@ function Filter(){
 
         const {name,value} = e.target
 
-        setInput(prevState => ({...prevState,[name]:value}))
+        if(name == "bfchecked"){
 
+            setInput(prevState => ({...prevState,[name]:!prevState.bfchecked}))
+        }else if(name == "petschecked"){
+
+            setInput(prevState => ({...prevState,[name]:!prevState.petschecked}))
+        }
+        else{
+
+            setInput(prevState => ({...prevState,[name]:value}))
+        }   
+       
     }
+
+    useEffect(()=>{
+        
+        handleFilters(input)
+    },[input])
 
     return(
         <div className="services-container filter-bg">
@@ -26,8 +44,8 @@ function Filter(){
                     <label for="room-type">Room Type</label>
                     <select name="roomType" id="roomType" value={input.roomType} onChange={handleChange}>
                         <option value="all">All</option>
-                        <option value="triple">Triple</option>
-                        <option value="Family">Family</option>
+                        <option value="presidential">Presidential</option>
+                        <option value="family">Family</option>
                         <option value="double">Double</option>
                         <option value="single">Single</option>
                     </select>
@@ -42,22 +60,23 @@ function Filter(){
                         <option value="4">4</option>
                         <option value="5">5</option>
                         <option value="6">6</option>
+                        <option value="10">10</option>
                     </select>
                 </div>
 
                 <div className="filter-flex">
-                    <label for="room-price">Room Type</label>
-                    <select></select>
+                    <label for="room-price">Room Price {input.price}$</label>
+                    <input type="range" min="1" max="600" value={input.price} onChange={handleChange} name="price"/>
                 </div>
 
                 <div className="filter-flex">
-                    <label for="room-size">Room Size</label>
-                    <select></select>
+                    <label for="room-size">Room Size(sq.ft)</label>
+                    <p className="checkbox-flex"> <input type="number" name="minSize" value={input.minSize} onChange={handleChange} min="0"/><input type="number" min="0" name="maxSize" value={input.maxSize} onChange={handleChange}/></p>
                 </div>
 
                 <div  className="filter-flex">
-                   <p className="checkbox-flex"> <input type="checkbox" /><label>Breakfast</label></p>
-                   <p className="checkbox-flex"> <input type="checkbox" /><label>Pets</label></p>
+                   <p className="checkbox-flex"> <input type="checkbox" checked={input.bfchecked} name="bfchecked"  onChange={handleChange}/><label>Breakfast</label></p>
+                   <p className="checkbox-flex"> <input type="checkbox" checked={input.petschecked} name="petschecked" onChange={handleChange}/><label>Pets</label></p>
                 </div>
             </div>
        </div> 
