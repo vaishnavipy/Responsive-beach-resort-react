@@ -15,10 +15,12 @@ function FeaturedRooms(){
 
                                             return(
                                             <div className="featured-room room-img-grid" key={i} >
+                                                <p className="room-price" >${price}<span> per night</span></p>
                                                 <div className=" featured-room-flex-height room-flex" style={{backgroundImage:`url(${images[0].fields.file.url})`}} onMouseEnter={(e)=>{handleHover(e)}} onMouseLeave={(e)=>{handleHoverOut(e)}}>
                                                      
                                                     <Link to={`/rooms/${slug}`} className="features-btn">Features</Link>
                                                 </div>
+                                               
                                                 <h3 className="room-title">{name}</h3>
                                             </div>
                                             )

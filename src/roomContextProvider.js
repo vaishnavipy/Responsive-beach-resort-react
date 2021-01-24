@@ -8,6 +8,8 @@ function RoomContextProvider({children}){
 
     const [data,setData] = useState(rawdata)
 
+    
+
     function handleFilters(input){
         let temp;
 
@@ -45,11 +47,13 @@ function RoomContextProvider({children}){
     function handleHover(e){
         e.currentTarget.classList.add("dark-bg")
        e.currentTarget.children[0].style.display ="inline"
+        e.currentTarget.previousElementSibling.style.opacity = "0"
     }
 
     function handleHoverOut(e){
         e.currentTarget.classList.remove("dark-bg")
         e.currentTarget.children[0].style.display ="none"
+        e.currentTarget.previousElementSibling.style.opacity = "100"
     }
 
 

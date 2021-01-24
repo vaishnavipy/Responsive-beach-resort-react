@@ -27,7 +27,7 @@ function RoomDetails(){
 console.log(slug)
     return(
     <div className="room-details">  
-        <RoomsBanner url={imgUrl} btnText={roomName}/> 
+        <RoomsBanner url={imgUrl} btnText={roomName} goBack="/rooms"/> 
         
         <div className="other-imgs main-container">
             {otherImages}

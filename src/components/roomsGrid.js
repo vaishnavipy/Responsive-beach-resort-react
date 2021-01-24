@@ -11,13 +11,14 @@ function RoomsGrid(){
    
 
     const allRooms = data.map((room,i) => {
-        const {name,slug,images} = room.fields
+        const {name,slug,images,price} = room.fields
 
         return(
             <div className="featured-room room-img-grid" key={i} >
+                 <p className="room-price" >${price}<span> per night</span></p>
                 <div className="room-flex all-room-flex-height" style={{backgroundImage:`url(${images[0].fields.file.url})`}} onMouseEnter={(e)=>{handleHover(e)}} onMouseLeave={(e)=>{handleHoverOut(e)}}>
                    
-                <Link to={`/rooms/${slug}`} className="features-btn">Features</Link>
+                    <Link to={`/rooms/${slug}`} className="features-btn">Features</Link>
                 </div>
                 <h4 className="room-title">{name}</h4>
             </div>
