@@ -8,7 +8,7 @@ function RoomContextProvider({children}){
 
     const [data,setData] = useState(rawdata)
 
-    
+    const [featuredRooms] = useState(rawdata.filter(obj =>  obj.fields.featured))
 
     function handleFilters(input){
         let temp;
@@ -60,7 +60,7 @@ function RoomContextProvider({children}){
 
 
     return(
-        <RoomContext.Provider value={{data,handleHover,handleHoverOut,handleFilters}}>  
+        <RoomContext.Provider value={{data,handleHover,handleHoverOut,handleFilters,featuredRooms}}>  
 
             {children}
         </RoomContext.Provider>

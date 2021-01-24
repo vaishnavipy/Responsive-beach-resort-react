@@ -4,12 +4,11 @@ import {Link} from "react-router-dom"
 
 function FeaturedRooms(){
 
-    const {data,handleHover,handleHoverOut} = useContext(RoomContext)
+    const {featuredRooms,handleHover,handleHoverOut} = useContext(RoomContext)
 
-    console.log(data)
+   
 
-    const featured = data.filter((rooms) => rooms.fields.featured).
-                                            map((featuredRoom,i) =>  {
+    const featured = featuredRooms.map((featuredRoom,i) =>  {
                                                 const {name,slug,images,price} = featuredRoom.fields
                                                 
 
@@ -26,7 +25,7 @@ function FeaturedRooms(){
                                             )
                                             })
 
-    console.log(featured)
+   
 
     return(
     <div className="featured-rooms-container">
