@@ -15,5 +15,4 @@ function RoomsBanner({url,btnText,goBack}){
 }
 
 RoomsBanner.defaultProps = {url : imgUrl,btnText: "Our Rooms",goBack:"/"}
-
 export default RoomsBanner

@@ -10,7 +10,6 @@ function Filter(){
 
     const [input,setInput] = useState({roomType:"all",guests:"1",price:"600",minSize:"0",maxSize:"1000",bfchecked:false,petschecked:false})
 
-   
 
     function handleChange(e){
 

@@ -24,7 +24,6 @@ function RoomDetails(){
 
     const extras = roomObj.fields.extras.map((extra,i) => <p key={i}>-{extra}</p>)
 
-console.log(slug)
     return(
     <div className="room-details">  
         <RoomsBanner url={imgUrl} btnText={roomName} goBack="/rooms"/> 

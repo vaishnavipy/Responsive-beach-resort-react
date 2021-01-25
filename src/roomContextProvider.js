@@ -58,7 +58,6 @@ function RoomContextProvider({children}){
 
 
 
-
     return(
         <RoomContext.Provider value={{data,handleHover,handleHoverOut,handleFilters,featuredRooms}}>  
 

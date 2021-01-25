@@ -5,7 +5,6 @@ import {Link} from "react-router-dom"
 function FeaturedRooms(){
 
     const {featuredRooms,handleHover,handleHoverOut} = useContext(RoomContext)
-
    
 
     const featured = featuredRooms.map((featuredRoom,i) =>  {

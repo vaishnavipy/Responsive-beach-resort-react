@@ -8,8 +8,6 @@ function RoomsGrid(){
 
     const {data,handleHover,handleHoverOut} = useContext(RoomContext)
 
-   
-
     const allRooms = data.map((room,i) => {
         const {name,slug,images,price} = room.fields
 
