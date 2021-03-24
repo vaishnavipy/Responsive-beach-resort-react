@@ -31,8 +31,8 @@ function Navbar(){
             <span className="menu-icon" onClick={handleMenuClick}><GiHamburgerMenu /></span>
 
             <div className="menu">
-              <Link to="/">  <a href="#">Home</a></Link>
-              <Link to="/rooms"> <a href="#">Rooms</a></Link>
+              <Link to="/Responsive-beach-resort-react/">  <a href="#">Home</a></Link>
+              <Link to="/Responsive-beach-resort-react/rooms"> <a href="#">Rooms</a></Link>
             </div>
 
         </div>
@@ -41,8 +41,8 @@ function Navbar(){
 
      <div className="small-screen-menu-parent hide-sidebar">
         <div className="small-screen-menu">
-            <Link to="/">  <a href="#">Home</a></Link>
-            <Link to="/rooms"> <a href="#">Rooms</a></Link>
+            <Link to="/Responsive-beach-resort-react/">  <a href="#">Home</a></Link>
+            <Link to="/Responsive-beach-resort-react/rooms"> <a href="#">Rooms</a></Link>
         </div>
     </div>
  </Fragment>

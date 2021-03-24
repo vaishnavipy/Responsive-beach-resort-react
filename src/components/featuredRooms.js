@@ -16,7 +16,7 @@ function FeaturedRooms(){
                                                 <p className="room-price" >${price}<span> per night</span></p>
                                                 <div className=" featured-room-flex-height room-flex" style={{backgroundImage:`url(${images[0].fields.file.url})`}} onMouseEnter={(e)=>{handleHover(e)}} onMouseLeave={(e)=>{handleHoverOut(e)}}>
                                                      
-                                                    <Link to={`/rooms/${slug}`} className="features-btn">Features</Link>
+                                                    <Link to={`/Responsive-beach-resort-react/rooms/${slug}`} className="features-btn">Features</Link>
                                                 </div>
                                                
                                                 <h3 className="room-title">{name}</h3>

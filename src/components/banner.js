@@ -8,7 +8,7 @@ function Banner(){
             <h1>Luxurious Rooms</h1>
             <hr/>
             <p>Deluxe Rooms Starting at $299</p>
-            <Link to="/rooms"><button className="banner-btn">Our Rooms</button></Link>
+            <Link to="/Responsive-beach-resort-react/rooms"><button className="banner-btn">Our Rooms</button></Link>
         </div>
     </div>)
 }

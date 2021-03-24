@@ -14,5 +14,5 @@ function RoomsBanner({url,btnText,goBack}){
     </div>)
 }
 
-RoomsBanner.defaultProps = {url : imgUrl,btnText: "Our Rooms",goBack:"/"}
+RoomsBanner.defaultProps = {url : imgUrl,btnText: "Our Rooms",goBack:"/Responsive-beach-resort-react"}
 export default RoomsBanner
