@@ -13,9 +13,9 @@ function App() {
       <Navbar />
 
       <Switch>
-        <Route exact path="/"><Home /></Route>
-        <Route exact path="/rooms"><Rooms /></Route>
-        <Route path="/rooms/:slug"><RoomDetails /></Route>
+        <Route exact path="/Responsive-beach-resort-react/"><Home /></Route>
+        <Route exact path="/Responsive-beach-resort-react/rooms"><Rooms /></Route>
+        <Route path="/Responsive-beach-resort-react/rooms/:slug"><RoomDetails /></Route>
       </Switch>
 
     </div>
